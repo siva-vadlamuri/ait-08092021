@@ -29,8 +29,8 @@ const user = {
 
 // Object Destructuring
 
-const { name, username, email, phone } = user;
-console.log(name, username, email, phone);
+// const { name, username, email, phone } = user;
+// console.log(name, username, email, phone);
 
 // nested Object Destructuring
 
@@ -318,10 +318,53 @@ const usersData = [
 ];
 // const [firstPersons]
 const secondPerson = usersData[1];
-const { website } = secondPerson;
+var { name, username, email, website } = secondPerson;
 console.log(website);
 
 // for (let value of usersData) {
 //   const { id } = value;
 //   console.log(id);
 // }
+
+const myStr =
+  "The name of the user " + name + "the email of the user is" + email;
+console.log(myStr);
+
+const userDetailsStr = `the name of the user is  ${name} and the email of the user is ${email}`;
+
+// Array methods
+const myArray = [2, 3, 4, 5, 6];
+// Map
+// What is the difference between map and forEach
+const doubleTheValues = myArray.map((num) => num * num);
+// myArray.forEach((num) => console.log(num * num));
+console.log(doubleTheValues);
+
+const users = [
+  {
+    id: 1,
+    name: "Srikanth",
+    age: 22,
+    location: "Bangalore",
+  },
+  {
+    id: 2,
+    name: "imran",
+    age: 35,
+    location: "Bihar",
+  },
+  {
+    id: 3,
+    name: "Subba reddy",
+    age: 18,
+    location: "Kadapa",
+  },
+];
+const filterdUsers = users.filter((user) => user.age < 25 && user.age > 30);
+console.log(filterdUsers);
+
+const totalAgeOfUser = users.reduce((total, currentValue) => {
+  console.log(total, currentValue.age);
+  return total + currentValue.age;
+}, 0);
+console.log(totalAgeOfUser);
