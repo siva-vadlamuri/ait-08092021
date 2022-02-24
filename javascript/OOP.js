@@ -38,11 +38,11 @@ const user1 = new User(
   "prasanth@123"
 );
 console.log(user1);
-User.prototype.logout = function () {
+User.prototype.myLogout = function () {
   alert("Logout");
 };
 // user1.login("prasanth@gmail.com", "prasanth@123");
-// user1.logout();
+user1.logout();
 
 const array = [1, 2, 3, 5, 17, 12];
 // const arr = new Array(10);
@@ -61,4 +61,7 @@ const array = [1, 2, 3, 5, 17, 12];
 Array.prototype.lastItem = function () {
   return this[this.length - 1];
 };
+Array.prototype.lastItem = function () {
+    return this[this.length - 1];
+  };
 console.log(array.lastItem());

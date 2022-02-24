@@ -29,3 +29,71 @@ const fetchProductsData = async () => {
 fetchProductsData();
 
 // addEventListener is a method of the window object
+// window.addEventListener("load", () => {
+  function getProductsData() {
+    fetch("https://fakestoreapi.com/products/")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
+  getProductsData();
+  // 
+// });
+// get the data from the twiter api
+function calcTheDiffBetweenDates(date1, date2) {
+  const diff = Math.abs(date1 - date2);
+  return diff;
+}
+
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// };
+
+// getProductsData();
+
+// const getProductsData = () => {
+//   fetch("https://fakestoreapi.com/products/")
+//     .then((res) => res.json())

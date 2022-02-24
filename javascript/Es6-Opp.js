@@ -10,18 +10,18 @@ class Human {
   //   login() {
   //     console.log(this.name, this.phone);
   //   }
-  getTheDetails() {
-    return `name is ${this.name} and email is ${this.email}`;
-  }
+  getTheDetails = () => `name is ${this.name} and email is ${this.email}`;
 }
 const user1 = new Human("Mr", "mr@gmail.com", 99999999, "Hyderbad", "");
-console.log(user1);
+console.log(user1.getTheDetails());
 
 class User extends Human {
   constructor(name, email, phone, address, password) {
     super(name, email, phone, address);
     this.password = password;
   }
+  getTheDetails = () =>
+    `name is ${this.name} and email is ${this.email} and password ${this.password}`;
 }
 
 const user2 = new User(
@@ -32,3 +32,24 @@ const user2 = new User(
   "siva@1277"
 );
 console.log(user2.getTheDetails());
+
+class Employee {
+  #bonus = 12;
+  constructor(employeeName, employeeAddress) {
+    this.employeeId = Date.now();
+    this.employeeName = employeeName;
+    this.employeeAddress = employeeAddress;
+    this.baseSalary = 50000;
+  }
+  salary = () => {
+    return this.baseSalary + (this.baseSalary * this.#bonus) / 100;
+  };
+}
+
+const ravi = new Employee("ravi", "achieversit");
+// ravi.bonus = 50;
+// ravi.#bonus = 50;
+console.log(ravi);
+const salaryOfRavi = ravi.salary();
+
+console.log(salaryOfRavi);
